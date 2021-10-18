@@ -55,9 +55,22 @@ function closeDonationModal() {
 function openDonationDoneModal(amount) {
     const inputValue = document.querySelector(`.js-input-amount-${amount}`);
     if (inputValue.value > 0) {
+        if (amount === PRODUCT_PRICE_25){
+            if (inputValue.value < PRODUCT_PRICE_25) {
+                alert(`Minimum donation is ${PRODUCT_PRICE_25}`);
+                return;
+            } 
+        } else if (amount === PRODUCT_PRICE_75){
+            if (inputValue.value < PRODUCT_PRICE_75) {
+                alert(`Minimum donation is ${PRODUCT_PRICE_75}`);
+                return;
+            }
+        }
+
         let result = Number(donationCount.value) + Number(inputValue.value);
         donationCount.value = result;
         progressBarCount.value = result;
+        donationBackersCount.value++;
         donationDoneModal.style.visibility = 'visible';
         closeDonationModal();
     } else { 
