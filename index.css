@@ -206,16 +206,17 @@ nav ul li a {
 }
 
 .css-donation-modal {
-    position: absolute;
+    position: fixed;
     top: 10%;
-    left: 26%;
+    left: 24%;
     width: 740px;
-    height: 1000px;
+    height: 100vh;
     background-color: white;
     z-index: 1;
     border-radius: 10px;
     padding: 50px;
     visibility: hidden;
+    overflow-y: auto;
 }
 
 .css-modal-enabled {

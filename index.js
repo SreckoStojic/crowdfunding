@@ -15,31 +15,13 @@ const PRODUCT_PRICE_25 = 25;
 const PRODUCT_PRICE_75 = 75;
 const PRODUCT_PRICE_200 = 200;
 
-/*
-function setModalInCenter(modal) {
-    // Get modal size
-    const w = modal.offsetWidth;
-    const h = modal.offsetHeight;
-    // Get window size
-    const bw = window.innerWidth;
-    const bh = window.innerHeight;
-    
-    // Update the css and center the modal on screen
-    console.log(w);
-    console.log(h);
-    console.log(bw);
-    console.log(bh);
-    
-    modal.style.top = `${(bh - h) / 2}px`;
-    modal.style.left = `${(bw - w) / 2}px`;
-};*/
 
 function openDonationModal() {
+    document.querySelector('body').style.overflow = 'hidden';
     main.classList.add('css-modal-enabled');
     donationDiv.classList.add('css-modal-enabled');
     stats.classList.add('css-modal-enabled');
-    aboutProducts.classList.add('css-modal-enabled');   
-    //setModalInCenter(donationModal);
+    aboutProducts.classList.add('css-modal-enabled');
     donationModal.style.visibility = 'visible';
 }
 
@@ -49,6 +31,7 @@ function closeDonationModal() {
     stats.classList.remove('css-modal-enabled');
     aboutProducts.classList.remove('css-modal-enabled');
     donationModal.style.visibility = 'hidden';
+    document.querySelector('body').style.overflowY = 'visible';
     donationModal.style.transition = 'visibility 0.1s';
 }
 
