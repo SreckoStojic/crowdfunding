@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0%;
+    background-color: #F2F2F2;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #7A7A7A;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.css-main {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header {
+    width: 1440px;
+    height: 400px;
+    background-image: url(images/image-hero-desktop.jpg);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: white;
+}
+
+.css-donation-div {
+    width: 730px;
+    height: 269px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+    margin-top: -120px;
+    border-radius: 10px;
+}
+
+.css-mastercraft-logo {
+    margin-top: -70px;
+}
+
+.css-donation-div-buttons {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    margin-top: 30px;
+}
+
+.css-btn {
+    border-radius: 25px;
+    width: 204px;
+    height: 50px;
+    border: none;
+    background-color: #3CB3AB;
+    color: white;
+}
+
+.css-bookmarks-btn {
+    width: 174px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    background-color: #7A7A7A;
+    color: white;
+    opacity: 0.9;
+}
+
+.css-bookmarks-btn img {
+    margin-left: -10px;
+}
+
+.css-stats {
+    border-radius: 10px;
+    background-color: white;
+    width: 730px;
+    height: 212px;
+}
+
+.css-stats-table {
+    width: 634px;
+    padding: 50px;
+    padding-bottom: 30px;
+}
+
+.css-stats-table tr th {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39.14px;
+    text-align: left;
+}
+
+.css-stats-table tr th input {
+    background-color: white;
+    border: none;
+    border-right: 1px solid gray;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39.14px;
+    width: 150px;
+    color: black;
+}
+
+.css-stats-table tr td {
+    font-family: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #7A7A7A;
+}
+
+.css-progress-bar {
+    width: 634px;
+    margin-left: 50px;
+}
+
+.css-about-products {
+    border-radius: 10px;
+    background-color: white;
+    width: 730px;
+    height: 1200px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.css-product {
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 634px;
+    height: 248px;
+}
+
+.css-product .css-product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.css-product .css-product-header p{
+    color: #3CB3AB;
+}
+
+.css-product .css-product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.css-product .css-product-footer h2::after {
+    content: 'left';
+    font-family: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7A7A7A;
+    margin-left: 10px;
+}
+
+.css-product .css-product-footer button {
+    width: 157px;
+    height: 48px;
+}
+
+.css-product-disabled {
+    opacity: 0.4;
+}
+
+.css-donation-modal {
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    width: 740px;
+    height: 1000px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 50px;
+    visibility: hidden;
+}
+
+.css-modal-enabled {
+    background-color: #979797;
+    opacity: 0.9;
+
+}
+
+.css-producs-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.css-full-product-modal {
+    width: 650px;
+    height: 157px;
+    border-radius: 10px;
+}
+
+.css-top-part-product-modal {
+    width: 650px;
+    height: 157px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+}
+
+.css-top-part-product-modal .css-product-header-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-top-part-product-modal .css-product-header-modal span p {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19.57px;
+    color: #3CB3AB;
+}
+
+.css-top-part-product-modal input {
+    width: 10%;
+    height: 15%;
+    margin-top: 25px;
+}
+
+.css-donation-modal .css-close-modal-btn {
+    position: absolute;
+    right: 50px;
+    background-image: url(images/icon-close-modal.svg);
+    width: 14.14px;
+    height: 14.14px;
+    border: none;
+    text-align: right;
+}
+.css-top-part-product-modal .css-product-header-modal span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 560px;
+    margin-bottom: -20px;
+}
+
+.css-top-part-product-modal .css-product-header-modal span h4 {
+    position: absolute;
+    right: 100px;
+}
+
+.css-top-part-product-modal .css-product-header-modal span h4::after {
+    content: 'left';
+    font-family: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7A7A7A;
+    margin-left: 10px;
+}
+
+.css-bottom-part-product-modal {
+    width: 634px;
+    height: 97px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.css-preset-btn {
+    width: 100px;
+    height: 48px;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.css-continue-btn {
+    border-radius: 25px;
+    width: 107px;
+    height: 48px;
+    border: none;
+    background-color: #3CB3AB;
+    color: white;
+    margin-left: 30px   ;
+}
+
+.css-bottom-part-product-modal {
+    width: 634px;
+    height: 97px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.css-bottom-part-product-modal input {
+    width: 320px;
+    border: none;
+}
+
+.css-donation-done-modal {
+    width: 540px;
+    height: 449px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    z-index: 1;
+    gap: 20px;
+    visibility: hidden;
+}
+
+.css-donation-done-modal button {
+    width: 107px;
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .css-main {
+        left: 200px;
+        width: 375px;
+    }
+
+    header {
+        width: 375px;
+        height: 300px;
+        background-image: url(images/image-hero-mobile.jpg);
+    }
+
+    nav {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    nav ul {
+        list-style: none;
+        text-align: right;
+        width: 100%;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .css-donation-div {
+        width: 327px;
+        height: 312px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+        padding-left: 30px;
+        text-align: center;
+    }
+
+    .css-donation-div-buttons {
+        width: 320px;
+        padding-right: 15%;
+    }
+
+    .css-bookmarks-btn {
+        width: 0px;
+    }
+
+    .css-stats {
+        width: 327px;
+        height: 400px;
+        padding: 0%;
+    }
+
+    .css-stats input {
+        width: 250px;
+    }
+
+    .css-about-products {
+        width: 327px;
+        height: auto;
+        padding: 2%;
+    }
+
+    .css-product {
+        width: 280px;
+        height: 450px;
+    }
+    
+    .css-stats-table {
+        width: auto;
+        position: relative;
+    }
+    /*
+    .css-stats-table tr > *{
+        display: block;
+    }
+    .css-stats-table tr {
+        display: table-cell;
+        margin-bottom: 10px;
+    }*/
+
+    .css-stats-table, .css-stats-table tr th, .css-stats-table tr td {
+        display: block;
+    }
+
+    .css-stats-table th {
+        display: none;  
+    }
+    
+    .css-stats-table tr th input{
+        width: 100px;
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+
+    .css-tr-head th {
+        margin-bottom: 40px;
+    }
+
+    .css-tr-body {
+        position: absolute;
+        top: 100px;
+    }
+
+    .css-tr-body td{
+        margin-bottom: 50px;
+    }
+    
+}
