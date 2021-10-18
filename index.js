@@ -83,8 +83,6 @@ function closeDonationDoneModal() {
 }
 
 function selectReward(amount) {
-    openDonationModal();
-    showProductDetails(amount);
     if (amount === PRODUCT_PRICE_25) {
         const radio25 = document.querySelector('.js-radio-25');
         radio25.checked = 'true';
@@ -92,6 +90,8 @@ function selectReward(amount) {
         const radio75 = document.querySelector('.js-radio-75');
         radio75.checked = 'true';
     }
+    openDonationModal();
+    showProductDetails(amount);
 }
 
 function showProductDetails(amount) {
